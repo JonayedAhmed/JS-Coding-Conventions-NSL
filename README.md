@@ -25,3 +25,20 @@
 - Encapsulate Conditionals.
 - Try to extend existing object using ES6 classes or inheritance, instead of creating the function. 
  
+## Objects and Data Structures
+- Object name should be noun.
+- use UpperCamelCasing (also known as PascalCasing).
+- Do not use JavaScript getter and setter properties.
+- Try to use private members (ES5).
+- Prefer composition over inheriance.
+- Use literals NOT constructors for creating general objects. i.e. use let myObject = { }; avoid let myObject = new Object();
+
+## Constructors
+- Constructors are optional. Subclass constructors must call super() before setting any fields or otherwise accessing this. Interfaces should declare non-method properties in the constructor.
+
+## Braces
+- Braces are required for all control structures(if, else, for, do, while).
+- Braces follow the Kernighan and Ritchie style.
+- No line break before the opening brace.
+- Line break after the opening brace.
+- Line break before the closing brace.
