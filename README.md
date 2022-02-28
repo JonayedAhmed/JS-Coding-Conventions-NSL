@@ -67,3 +67,18 @@
 - Avoid Unnecessary comments.
 - Remove commented out codes from codebase after serving the perpouse.
 - Classes, interfaces and records must be documented with a description and any template parameters, implemented interfaces, visibility, or other appropriate tags. The class description should provide the reader with enough information to know how and when to use the class, as well as any additional considerations necessary to correctly use the class. 
+
+## Enums 
+- Enumerations are defined by adding the @enum annotation to an object literal. Additional properties may not be added to an enum after it is defined. Enums must be constant, and all enum values must be deeply immutable.
+
+## General guidelines
+- Use template literals  ``.
+- User strict equality (===).
+- Avoid using flags.
+- Block indentation should be 4 space (Tab).
+- Use ; in every line. Every statement must be terminated with a semicolon. Relying on automatic semicolon insertion is forbidden.
+- Use expanded syntax.
+- Ternary operators should be put on a single line.
+- One statement per line. Each statement is followed by a line-break.
+- JavaScript code has a column limit of 80 characters. Except as noted below, any line that would exceed this limit must be line-wrapped.
+- Do not use block scoped functions declarations.
