@@ -1,5 +1,24 @@
 # **JavaScript Coding Convention (NSL)**
 
+
+## Table of Contents
+
+1. [Variables](#1.variables)
+2. [Functions](#functions)
+3. [Objects and Data Structures](#objects-and-data-structures)
+4. [Constructors](#constructors)
+5. [Braces](#braces)
+6. [Filename](#filename)
+7. [Hierarchy](#hierarchy)
+8. [Callbacks](#callbacks)
+9. [Imports](#imports)
+10. [Exports](#exports)
+11. [Comments](#comments)
+12. [Enums](#enums)
+13. [General guidelines](#general-guidelines)
+
+
+
 ## Variables
 - Use lowerCamelCase for variables name.
 - Use let (for storing a value which chnages frquently).
@@ -25,6 +44,7 @@
 - Encapsulate Conditionals.
 - Try to extend existing object using ES6 classes or inheritance, instead of creating the function. 
  
+
 ## Objects and Data Structures
 - Object name should be noun.
 - use UpperCamelCasing (also known as PascalCasing).
@@ -67,6 +87,7 @@
 - Avoid Unnecessary comments.
 - Remove commented out codes from codebase after serving the perpouse.
 - Classes, interfaces and records must be documented with a description and any template parameters, implemented interfaces, visibility, or other appropriate tags. The class description should provide the reader with enough information to know how and when to use the class, as well as any additional considerations necessary to correctly use the class. 
+
 
 ## Enums 
 - Enumerations are defined by adding the @enum annotation to an object literal. Additional properties may not be added to an enum after it is defined. Enums must be constant, and all enum values must be deeply immutable.
