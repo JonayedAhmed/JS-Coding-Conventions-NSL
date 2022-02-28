@@ -53,3 +53,17 @@
 ## Callbacks
 - Avoid complex nested callbacks. 
 - Use single-argument style.
+
+## Imports
+- ES module files must use the import statement to import other ES module files.
+- The .js file extension is not optional in import paths and must always be included.
+- Do not import the same file multiple times.
+
+## Exports
+- Use named exports in all code. You can apply the export keyword to a declaration, or use the export {name}; syntax.
+- Do not use default exports.
+
+## Comments 
+- Avoid Unnecessary comments.
+- Remove commented out codes from codebase after serving the perpouse.
+- Classes, interfaces and records must be documented with a description and any template parameters, implemented interfaces, visibility, or other appropriate tags. The class description should provide the reader with enough information to know how and when to use the class, as well as any additional considerations necessary to correctly use the class. 
