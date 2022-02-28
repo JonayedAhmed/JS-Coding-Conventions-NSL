@@ -38,6 +38,8 @@
 - Function should ensure reusability of code and avoid duplication.
 - Avoid negative conditioning.
 - Where possible, use the function declaration to define functions over function expressions. 
+- Prefer arrow functions over other this scoping approaches such as f.bind(this), goog.bind(f, this), and const self = this.
+- Arrow functions are particularly useful for calling into callbacks as they permit explicitly specifying which parameters to pass to the callback whereas binding will blindly pass along all parameters.
 - When using anonymous functions inside a method that requires a function as a parameter, it is acceptable to use an arrow function (although not required).
 - If parameter is passed use default argument in function.
 - Try to use minimum arguments. Preferably 2-3.
