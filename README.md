@@ -42,3 +42,14 @@
 - No line break before the opening brace.
 - Line break after the opening brace.
 - Line break before the closing brace.
+
+## Filename 
+-File names must be all lowercase and may include underscores (_) or dashes (-), but no additional punctuation.Follow the convention that your project uses.
+
+## Hierarchy
+- Module namespaces may never be named as a direct child of another module's namespace.
+- Use goog.module('foo.bar'); NOT goog.module('foo.bar.baz');
+
+## Callbacks
+- Avoid complex nested callbacks. 
+- Use single-argument style.
