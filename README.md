@@ -105,3 +105,94 @@
 - One statement per line. Each statement is followed by a line-break.
 - JavaScript code has a column limit of 80 characters. Except as noted below, any line that would exceed this limit must be line-wrapped.
 - Do not use block scoped functions declarations.
+
+
+## Example 1
+
+```javascript
+/*
+* Title: Temperature Calculation
+* Description: Calculations like convertion, max and min temperature
+*/
+
+//Dependencies
+import temperature from "./temp.js";
+
+allTemperatureData = [32,25,21,33,40,42];
+
+temperature.convertToCelcius(89);
+temperature.convertToFahrenhe(22);
+temperature.calculateMaximumTemperature(allTemperatureData);
+```
+
+```javascript
+/*
+* Title: Temperature Calculation
+* Description: Calculations like convertion, max and min temperature
+*/
+
+
+//module scarfing
+const temperature = {}
+
+// Converts Farhenheit to Celcius
+temperature.convertToCelcius = (fahrenheitTemperature=32) => {
+    var fahrenheitTemperature = typeof(fahrenheitTemperature) === Number ? fahrenheitTemperature : false;
+    if(fahrenheitTemperature){
+        return Math.round((fahrenheitTemperature - 32)*0.555);
+    }
+    else{
+        return "Invalid Input";
+    }
+}
+
+// Converts Celcius to Farenheit
+temperature.convertToFahrenhe = (celciusTemperature=-17.78) => {
+    var fahrenheitTemperature = typeof(celciusTemperature) === Number ? celciusTemperature : false;
+    if(fahrenheitTemperature){
+        return Math.round((celciusTemperature * 1.8)+32);
+    }
+    else{
+        return "Invalid Input";
+    }
+}
+
+// Calculates the maximum
+temperature.calculateMaximumTemperature = (allTemperatureData) => {
+    let maxTemperature = allTemperatureData[0];
+    for(let i=1; i<allTemperatureData.length; i++){
+        maxTemperature = allTemperatureData[i] > maxTemperature ? allTemperatureData[i] : maxTemperature;
+    }
+    return maxTemperature;
+}
+
+module.exports = temperature;
+```
+
+## Example 2
+
+```javascript
+const makeBurger = () => {
+  return getBeef()
+    .then(beef => cookBeef(beef))
+    .then(cookedBeef => getBuns(cookedBeef))
+    .then(bunsAndBeef => putBeefBetweenBuns(bunsAndBeef))
+}
+
+// Make and serve burger
+makeBurger()
+  .then(burger => serve(burger))
+```
+OR
+```javascript
+const makeBurger = () => {
+  return getBeef()
+    .then(cookBeef)
+    .then(getBuns)
+    .then(putBeefBetweenBuns)
+}
+
+// Make and serve burger
+makeBurger()
+  .then(serve)
+```
