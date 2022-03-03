@@ -41,7 +41,7 @@
 - Prefer arrow functions over other this scoping approaches such as f.bind(this), goog.bind(f, this), and const self = this.
 - Arrow functions are particularly useful for calling into callbacks as they permit explicitly specifying which parameters to pass to the callback whereas binding will blindly pass along all parameters.
 - When using anonymous functions inside a method that requires a function as a parameter, it is acceptable to use an arrow function (although not required).
-- If parameter is passed use default argument in function.
+- If parameter is passed try to use default argument in function if there is a possibility of any error or null value or empty value.
 - Try to use minimum arguments. Preferably 2-3.
 - Encapsulate Conditionals.
 - Try to extend existing object using ES6 classes or inheritance, instead of creating the function. 
@@ -137,6 +137,8 @@ const temperature = {}
 
 // Converts Farhenheit to Celcius
 temperature.convertToCelcius = (fahrenheitTemperature=32) => {
+    // Try to Avoid Type Checking
+    // If type checking is done, try to use strong type check
     var fahrenheitTemperature = typeof(fahrenheitTemperature) === Number ? fahrenheitTemperature : false;
     if(fahrenheitTemperature){
         return Math.round((fahrenheitTemperature - 32)*0.555);
